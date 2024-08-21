@@ -1,4 +1,4 @@
-# RubberDuck Debugging
+# RubberDuck Debugging 🐤
 
 RubberDuckDebugging is a single-page application built with React and TypeScript. It simulates a chat where you can "talk" to a rubber duck, following the well-known Rubber Duck Debugging technique.
 
