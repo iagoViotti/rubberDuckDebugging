@@ -1,4 +1,4 @@
-# RubberDuck Debugging
+# RubberDuck Debugging 🐤
 
 RubberDuckDebugging is a single-page application built with React and TypeScript. It simulates a chat where you can "talk" to a rubber duck, following the well-known Rubber Duck Debugging technique.
 
@@ -33,8 +33,9 @@ Ensure you have Node.js installed, then run:
 This will start the app locally, and you can access it at your default port (usually http://localhost:5173).
 
 
-<!-- Live Demo
-You can also try out the application directly via this link. -->
+### Live Demo
+
+You can also try out the application directly via this [link](https://rubberduckdebugging.vercel.app/)
 
 
 ### Contributing
