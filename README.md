@@ -33,8 +33,9 @@ Ensure you have Node.js installed, then run:
 This will start the app locally, and you can access it at your default port (usually http://localhost:5173).
 
 
-<!-- Live Demo
-You can also try out the application directly via this link. -->
+### Live Demo
+
+You can also try out the application directly via this [link](https://rubberduckdebugging.vercel.app/)
 
 
 ### Contributing
