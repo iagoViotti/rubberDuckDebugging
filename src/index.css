@@ -1,0 +1,36 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: light-dark(#ffffffde, #000000de);
+  background-color: light-dark(#242424, #dde5ff);
+
+  /* import image from internet */
+
+  background-image: url('https://wallpapercave.com/wp/wp12401706.jpg');
+  background-size: cover;
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+  margin: 0;
+  height: 100vh !important;
+  transform: translateX(-20%);
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}

@@ -1,0 +1,34 @@
+.message-item {
+  display: flex;
+  align-items: center;
+  flex-direction: 'column';
+  position: relative;
+  padding: 8px;
+  max-width: 80%;
+  margin: 10px;
+  font-size: 0.8em;
+}
+
+.user {
+  background-color: #f7f7f7;
+  align-self: flex-end;
+  border-radius: 10px 10px 0 10px;
+  color: #3d3d3d;
+}
+
+.duck {
+  background-color: #3d3d3d;
+  align-self: flex-start;
+  border-radius: 10px 10px 10px 0;
+  color: #f7f7f7;
+}
+
+.message-time {
+  font-size: 0.6em;
+  margin-left: 10px;
+  align-self: flex-end;
+}
+
+.duck .message-time {
+  color: #ebebeb;
+}

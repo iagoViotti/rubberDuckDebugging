@@ -1,0 +1,16 @@
+.container {
+  position: fixed;
+  bottom: 20%;
+  right: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 50px;
+  background: linear-gradient(103deg, rgba(255, 255, 255, 0.4962359943977591) 15%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0.4990371148459384) 100%);
+  box-shadow: 1px 1px 2px 1px rgba(8, 8, 8, 0.13);
+  justify-content: flex-end;
+  height: 60%;
+  padding: 20px;
+  width: 30%;
+  min-width: 300px;
+}
