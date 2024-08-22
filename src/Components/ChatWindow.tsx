@@ -4,7 +4,6 @@ import MessageItem from './MessageItem';
 import send from '../assets/send.svg';
 import './ChatWindow.css';
 
-
 const ChatWindow = () => {
   const { messages, addMessage, quack } = useChat();
   const inputRef = useRef<HTMLInputElement>(null);

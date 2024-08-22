@@ -1,5 +1,3 @@
-// src/Components/RubberDuck.d.ts
-
 import { ComponentType } from 'react';
 
 declare module './RubberDuck' {
