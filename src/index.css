@@ -1,3 +1,18 @@
+@font-face {
+  font-family: Alavine;
+  src: url('/public/fonts/AlavineDemoRegular-3la3z.otf');
+}
+
+@font-face {
+  font-family: LCD;
+  src: url('/public/fonts/LcdSolid-VPzB.ttf');
+}
+
+@font-face {
+  font-family: Summer Pixel;
+  src: url('/public/fonts/SummerPixel22Regular-jE0W7.ttf');
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

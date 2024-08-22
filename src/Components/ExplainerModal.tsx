@@ -1,6 +1,16 @@
 import './ExplainerModal.css'
+import usaFlag from '../assets/usaFlag.svg'
+import brasilFlag from '../assets/brasilFlag.svg'
+import { useState } from 'react'
+import { texts } from '../assets/ExplainTexts'
+
+interface Texts {
+  [key: string]: string;
+}
 
 const ExplainerModal = ({ setExplainerModal }: { setExplainerModal: Function }) => {
+  const [language, setLanguage] = useState('en')
+
   return (
     <div
       id='explainer-modal'
@@ -10,14 +20,40 @@ const ExplainerModal = ({ setExplainerModal }: { setExplainerModal: Function }) 
         id='explainer-content'
         className='explainer-content'
       >
+        <div
+          className='flag-container'
+        >
+          <label
+            onClick={() => {
+              setLanguage('en')
+            }}
+          >
+            <img
+              src={usaFlag}
+              alt='USA flag'
+              className={`flag ${language === 'en' ? 'selected' : ''}`}
+            />
+          </label>
+          <label
+            onClick={() => {
+              setLanguage('pt')
+            }}
+          >
+            <img
+              src={brasilFlag}
+              alt='Brasil flag'
+              className={`flag ${language === 'pt' ? 'selected' : ''}`}
+            />
+          </label>
+        </div>
         <h1>Rubber Duck Debugger</h1>
         <p>
-          In software engineering, rubber duck debugging (or rubberducking) is a method of debugging code by articulating a problem in spoken or written natural language. The name is a reference to a story in the book The Pragmatic Programmer in which a programmer would carry around a rubber duck and debug their code by forcing themselves to explain it, line by line, to the duck.
+          {(texts as Texts)[language]}
         </p>
         <button
           onClick={() => setExplainerModal(false)}
         >
-          Understood
+          {language === 'en' ? 'Understood' : 'Entendido'}
         </button>
       </div>
     </div>

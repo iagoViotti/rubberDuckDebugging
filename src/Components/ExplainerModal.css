@@ -1,11 +1,109 @@
 #explainer-modal {
   position: fixed;
+  display: flex;
   z-index: 1;
-  padding-top: 100px;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.781);
+  /* background-color: #023100bb; */
+  color: #f7f7f7;
+}
+
+#explainer-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 0 40px;
+  border: 1px solid rgb(235, 235, 235);
+  box-shadow: inset 0 0 5px #000000;
+  background: linear-gradient(120deg, rgba(20, 99, 0, 0.75) 15%, hsla(108, 100%, 17%, 0.493) 60%, rgba(20, 99, 0, 0.75) 90%, rgba(17, 87, 0, 0.267) 100%);
+  /* border-radius: 30px; */
+  width: 70%;
+  font-family: LCD;
+}
+
+.flag-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.flag {
+  margin: 10px 10px;
+}
+
+.flag-container label {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.flag-container img {
+  cursor: pointer;
+  display: block;
+}
+
+.selected {
+  border-bottom: 2px solid white;
+}
+
+#explainer-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow:
+    0 0 0 4px #000,
+    0 0 0 8px #f7f7f7,
+    0 0 0 12px #000,
+    0 0 0 16px #f7f7f7;
+  pointer-events: none;
+}
+
+#explainer-content h1 {
+  text-align: center;
+  font-size: 2.5em;
+  font-family: Alavine;
+  margin: auto;
+  line-height: 2em;
+}
+
+#explainer-content p {
+  font-size: 0.95em;
+}
+
+#explainer-content button {
+  position: relative;
+  background: linear-gradient(to right, #00000000, #02a502f1, #ffffff00);
+  background-color: transparent;
+  border: none;
+  border-top: 1px solid green;
+  border-bottom: 1px solid green;
+  padding: 0.5em 2em;
+  text-align: center;
+  text-decoration: none;
+  align-self: flex-end;
+  justify-self: flex-end;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: LCD;
+  margin-bottom: 0.8em;
+}
+
+#explainer-content button:hover {
+  border-top: 1px solid #00a700;
+  border-bottom: 1px solid #00a700;
+  transition: all 0.3s;
+}
+
+#explainer-content button:active {
+  border-top: 1px solid #00a700;
+  border-bottom: 1px solid #00a700;
+  transition: all 0.3s;
 }
