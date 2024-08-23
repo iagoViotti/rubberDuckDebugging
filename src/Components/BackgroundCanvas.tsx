@@ -7,7 +7,7 @@ const BackgroundCanvas = () => {
     <>
       <Canvas
         camera={{
-          position: [-3.7439, 1.5835, 3.3649],
+          position: [-4.1483, 1.8469, 3.9246],
         }}
       >
         {/* <gridHelper args={[10, 10]} />
@@ -25,9 +25,9 @@ const BackgroundCanvas = () => {
           panSpeed={1}
           rotateSpeed={0.5}
           rotation={[0, 2, 0]}
-        // onChange={(e) => {
-        //   console.log(e?.target?.object?.position);
-        // }}
+        onChange={(e) => {
+          console.log(e?.target?.object?.position);
+        }}
         />
       </Canvas>
     </>
