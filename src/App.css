@@ -5,12 +5,32 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 50px;
-  background: linear-gradient(103deg, rgba(255, 255, 255, 0.4962359943977591) 15%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0.4990371148459384) 100%);
+  border-radius: 15px 15px 2px 2px;
+  background:
+    linear-gradient(103deg,
+      rgba(211, 211, 211, 0.496) 15%,
+      rgba(255, 255, 255, 0) 60%,
+      rgba(211, 211, 211, 0.499) 100%);
+  backdrop-filter: blur(5px);
   box-shadow: 1px 1px 2px 1px rgba(8, 8, 8, 0.13);
   justify-content: flex-end;
   height: 60%;
-  padding: 20px;
+  padding-bottom: 10px;
   width: 30%;
   min-width: 300px;
+}
+
+.container-header {
+  background-color: #4e4e4ed8;
+  line-height: 2em;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+
+.container h4 {
+  margin: 10px 0 0 15px;
+  padding: 0;
+  font-size: 1.5em;
+  font-family: 'Summer Pixel', sans-serif;
+  color: #faee4a;
 }

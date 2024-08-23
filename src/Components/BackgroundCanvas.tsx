@@ -7,7 +7,7 @@ const BackgroundCanvas = () => {
     <>
       <Canvas
         camera={{
-          position: [-3.7439, 1.5835, 3.3649],
+          position: [-4.1483, 1.8469, 3.9246],
         }}
       >
         {/* <gridHelper args={[10, 10]} />

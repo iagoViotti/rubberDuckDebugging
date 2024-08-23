@@ -17,10 +17,11 @@
 }
 
 .duck {
-  background-color: #3d3d3d;
+  background-color: #4e4e4ed8;
+  /* background-color: #3d3d3d; */
   align-self: flex-start;
   border-radius: 10px 10px 10px 0;
-  color: #f7f7f7;
+  color: #faee4a;
 }
 
 .message-time {

@@ -1,25 +1,5 @@
-// import { useRef } from 'react';
-
-// const useRubberDuckSound = () => {
-//   const audioRef = useRef<HTMLAudioElement>(new Audio('./rubberDuck.mp3'));
-//   const playSound = () => {
-//     audioRef.current.currentTime = 0;
-//     audioRef.current.play();
-//     audioRef.current.volume = 0.4;
-//   };
-
-//   return playSound;
-// };
-
-// export default useRubberDuckSound;
-
 import React, { createContext, useContext, useRef, useState } from 'react';
-
-interface AudioContextProps {
-  playRubberDuckSound: () => void;
-  isMuted: boolean;
-  toggleMute: () => void;
-}
+import { AudioContextProps } from '../interfaces/AudioContext';
 
 const AudioContext = createContext<AudioContextProps | undefined>(undefined);
 
