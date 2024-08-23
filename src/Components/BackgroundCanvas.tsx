@@ -25,9 +25,9 @@ const BackgroundCanvas = () => {
           panSpeed={1}
           rotateSpeed={0.5}
           rotation={[0, 2, 0]}
-        onChange={(e) => {
-          console.log(e?.target?.object?.position);
-        }}
+        // onChange={(e) => {
+        //   console.log(e?.target?.object?.position);
+        // }}
         />
       </Canvas>
     </>

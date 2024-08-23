@@ -29,6 +29,13 @@ export default function App() {
         id='App'
         className="container"
       >
+        <div
+          className='container-header'
+        >
+          <h4>
+            Duck chat
+          </h4>
+        </div>
         <ChatWindow />
       </div>
       <Mute />
