@@ -22,9 +22,6 @@
   color: light-dark(#ffffffde, #000000de);
   background-color: light-dark(#242424, #000000);
 
-  /* import image from internet */
-
-  /* background-image: url('https://wallpapercave.com/wp/wp12401706.jpg'); */
   background-image: url('../public/ninSF_BG_sample.png');
   background-size: cover;
 
