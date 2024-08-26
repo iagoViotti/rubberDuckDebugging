@@ -20,14 +20,14 @@
 
   color-scheme: light dark;
   color: light-dark(#ffffffde, #000000de);
-  background-color: light-dark(#242424, #dde5ff);
+  background-color: light-dark(#242424, #000000);
 
   /* import image from internet */
 
   /* background-image: url('https://wallpapercave.com/wp/wp12401706.jpg'); */
   background-image: url('../public/ninSF_BG_sample.png');
   background-size: cover;
-  
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -42,8 +42,13 @@ body {
 canvas {
   display: block;
   margin: 0;
-  height: 100vh !important;
-  transform: translateX(-20%);
+  height: 100dvh !important;
+}
+
+@media (min-width: 768px) {
+  canvas {
+    transform: translateX(-20%);
+  }
 }
 
 h1 {

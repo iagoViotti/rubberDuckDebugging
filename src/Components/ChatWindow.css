@@ -55,3 +55,11 @@
   background-color: #4e4e4ed8;
   font-family: 'Courier New', Courier, monospace;
 }
+
+.minimized-container #chat-window {
+  display: none;
+}
+
+.minimized-container #chat-form {
+  display: none;
+}

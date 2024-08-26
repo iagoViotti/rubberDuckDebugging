@@ -18,7 +18,6 @@ const ChatWindow = () => {
         time: new Date().toLocaleTimeString(),
         sender: 'user',
       });
-      console.log('input.value.length:', input.value.length);
       setDuckThinking(true);
       let length = input.value.length;
       setTimeout(() => {
