@@ -41,6 +41,29 @@
   cursor: pointer;
 }
 
+.bot-button {
+  background-color: transparent;
+  border: none;
+  padding-right: 0.5em;
+  margin: 5px;
+  border-radius: 0 10px 0 0;
+}
+
+.bot-button:hover {
+  border: none;
+  background-color: #727272d8;
+}
+
+.bot-button:active {
+  background-color: #5e5e5ed8;
+}
+
+.header-buttons {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
 @media (max-width: 767px) {
   .container {
     bottom: 50%;
@@ -54,6 +77,16 @@
     position: fixed;
     bottom: 0;
     min-width: 50%;
+  }
+
+  .header-buttons {
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  .bot-button {
+    border-radius: 0;
   }
 }
 

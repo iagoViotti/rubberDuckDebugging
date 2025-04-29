@@ -7,10 +7,12 @@ import ExplainerModal from './Components/ExplainerModal';
 import QuestionMark from './Components/QuestionMark';
 import minimize from './assets/minimize.svg';
 import maximize from './assets/maximize.svg';
+import Bot from './assets/bot';
 
 export default function App() {
   const [explainerModal, setExplainerModal] = useState(false);
   const [minimized, setMinimized] = useState(false);
+  const [aiEngaged, setAiEngaged] = useState(false);
 
   window.addEventListener('resize', () => {
     if (window.innerWidth < 768) {
@@ -44,13 +46,23 @@ export default function App() {
           <h4>
             Duck chat
           </h4>
-          {
-            window.innerWidth < 768 &&
-            <img
-              src={minimized ? maximize : minimize}
-              onClick={() => setMinimized(!minimized)}
-            />
-          }
+          <div
+            className='header-buttons'
+          >
+            <button
+              className='bot-button'
+              onClick={() => setAiEngaged(!aiEngaged)}
+            >
+              <Bot fill={aiEngaged ? '#faee4a' : '#b9b9b9'} />
+            </button>
+            {
+              window.innerWidth < 768 &&
+              <img
+                src={minimized ? maximize : minimize}
+                onClick={() => setMinimized(!minimized)}
+              />
+            }
+          </div>
         </div>
         <ChatWindow />
       </div>
