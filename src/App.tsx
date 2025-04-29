@@ -8,11 +8,12 @@ import QuestionMark from './Components/QuestionMark';
 import minimize from './assets/minimize.svg';
 import maximize from './assets/maximize.svg';
 import Bot from './assets/bot';
+import { useChat } from './hooks/useChat';
 
 export default function App() {
   const [explainerModal, setExplainerModal] = useState(false);
   const [minimized, setMinimized] = useState(false);
-  const [aiEngaged, setAiEngaged] = useState(false);
+  const { aiEngaged, setAiEngaged } = useChat();
 
   window.addEventListener('resize', () => {
     if (window.innerWidth < 768) {

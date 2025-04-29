@@ -7,6 +7,8 @@ const ChatContext = createContext<{
   addMessage: (message: Omit<MessageObj, 'id'>) => void;
   quack: (length: number) => void;
   quackAnimation: (actions: { [key: string]: AnimationAction | null }, names: string[]) => void;
+  aiEngaged: boolean;
+  setAiEngaged: React.Dispatch<React.SetStateAction<boolean>>;
 } | undefined>(undefined);
 
 
@@ -21,6 +23,7 @@ export const useChat = () => {
 export const ChatProvider = ({ children }: { children: React.ReactNode }) => {
   const [messages, setMessages] = useState<MessageObj[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [aiEngaged, setAiEngaged] = useState(false);
 
   const quackAnimation = (actions: { [key: string]: AnimationAction | null }, names: string[]) => {
     const action = actions[names[0]];
@@ -58,7 +61,7 @@ export const ChatProvider = ({ children }: { children: React.ReactNode }) => {
   }
 
   return (
-    <ChatContext.Provider value={{ messages, addMessage, quack, quackAnimation }}>
+    <ChatContext.Provider value={{ messages, addMessage, quack, quackAnimation, aiEngaged, setAiEngaged }}>
       {children}
     </ChatContext.Provider>
   );
