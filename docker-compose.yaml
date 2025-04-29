@@ -19,3 +19,4 @@ services:
       - ./backend/src:/backend/src
     environment:
       - APP_PORT=3001
+      - OPENAI_API_KEY=${OPENAI_API_KEY}

@@ -3,9 +3,7 @@ import { useChat } from '../hooks/useChat';
 import MessageItem from './MessageItem';
 import send from '../assets/send.svg';
 import './ChatWindow.css';
-// import OpenAI from "openai";
-
-// const openai = new OpenAI();
+import { askGPT } from '../utils/requests';
 
 const ChatWindow = () => {
   const { messages, addMessage, quack, aiEngaged } = useChat();
@@ -30,15 +28,25 @@ const ChatWindow = () => {
         }, (1500 + length * 20));
       }
     }
-    // if (aiEngaged) {
-    //   const response = await openai.responses.create({
-    //     model: "gpt-4.1",
-    //     input: "Write a one-sentence bedtime story about a unicorn."
-    //   });
-
-    //   console.log(response.output_text);
-    // }
-
+    if (aiEngaged) {
+      if (input.value) {
+        addMessage({
+          text: input.value,
+          time: new Date().toLocaleTimeString(),
+          sender: 'user',
+        });
+        setDuckThinking(true);
+        const body = { input: input.value }
+        const response = await askGPT(body);
+        setDuckThinking(false);
+        console.log(response);
+        addMessage({
+          text: response.message,
+          time: new Date().toLocaleTimeString(),
+          sender: 'duck',
+        });
+      }
+    }
     input.value = '';
   };
 
