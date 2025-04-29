@@ -1,0 +1,21 @@
+version: '3.9'
+services:
+  frontend:
+    container_name: rubberduck_front
+    build: frontend/
+    ports:
+      - 5173:5173
+    working_dir: /frontend
+    volumes:
+      - ./frontend:/frontend
+  backend:
+    container_name: rubberduck_back
+    build: ./backend
+    ports:
+      - 3001:3001
+    working_dir: /backend
+    command: dev
+    volumes:
+      - ./backend/src:/backend/src
+    environment:
+      - APP_PORT=3001
